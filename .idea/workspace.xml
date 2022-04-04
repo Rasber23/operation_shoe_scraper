@@ -1,18 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="68aaf158-4add-4767-b47a-806ebaf54037" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmd/job/job.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmd/job/main.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/internal/entity/article.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/internal/entity/brand.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/internal/feed/crawler.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/internal/feed/scraper.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/internal/job/job.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
+    <list default="true" id="68aaf158-4add-4767-b47a-806ebaf54037" name="Default Changelist" comment="add scraper and crawler">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmd/job/job.go" beforeDir="false" afterPath="$PROJECT_DIR$/cmd/job/job.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmd/job/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/cmd/job/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internal/feed/crawler.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/feed/crawler.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internal/job/job.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/job/job.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,6 +49,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="SONARLINT_PRECOMMIT_ANALYSIS" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="go.import.settings.migrated" value="true" />
@@ -73,6 +68,19 @@
     </key>
   </component>
   <component name="RunManager">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="/Users/rasmusbernestal/Desktop/examensarbete/shoe_scraper" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -110,7 +118,15 @@
       <workItem from="1647945665584" duration="522000" />
       <workItem from="1647946444965" duration="3177000" />
       <workItem from="1648797226316" duration="19220000" />
+      <workItem from="1649054670173" duration="3516000" />
     </task>
+    <task id="LOCAL−00001" summary="add scraper and crawler">
+      <created>1649054695145</created>
+      <option name="number" value="LOCAL−00001" />
+      <option name="presentableId" value="LOCAL−00001" />
+      <updated>1649054695145</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -127,6 +143,10 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="add scraper and crawler" />
+    <option name="LAST_COMMIT_MESSAGE" value="add scraper and crawler" />
   </component>
   <component name="VgoProject">
     <integration-enabled>true</integration-enabled>

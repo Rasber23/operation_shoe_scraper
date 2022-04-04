@@ -1,20 +1,24 @@
 package job
 
-type Crawler struct {
-	Fetch ICrawl
+import (
+	"shoe_scraper/internal/feed"
+)
+
+type Crawlers struct {
+	CrawlProducts ICrawlProducts
+	CrawlBrands   ICrawlBrands
 }
 
-type brandPaths []string
-
-type productPaths []string
-
-type ICrawl interface {
-	ProductPaths(bp brandPaths) productPaths
-	Paths() brandPaths
+type ICrawlProducts interface {
+	GetProductPaths(bp feed.BrandPaths) feed.ProductPaths
 }
 
-func (crawl Crawler) Run() {
+type ICrawlBrands interface {
+	GetBrandPaths() feed.BrandPaths
+}
 
-	crawl.Fetch.ProductPaths(crawl.Fetch.Paths())
+func (crawl Crawlers) Run() {
+
+	crawl.CrawlProducts.GetProductPaths(crawl.CrawlBrands.GetBrandPaths())
 
 }

@@ -7,19 +7,19 @@ import (
 	"strings"
 )
 
-type brandPaths []string
+type ScrapeProducts struct{}
 
-type productPaths [][]string
+type ProductPaths [][]string
 
-func crawl() {
+type ScrapeBrand struct{}
 
-}
+type BrandPaths []string
 
-func ProductPaths(bp brandPaths) productPaths {
+func (f ScrapeProducts) GetProductPaths(bp BrandPaths) ProductPaths {
 
 	c := colly.NewCollector()
 
-	var listOfLinks productPaths
+	var listOfLinks ProductPaths
 
 	fmt.Println("Längd: ", len(bp))
 
@@ -52,13 +52,13 @@ func ProductPaths(bp brandPaths) productPaths {
 	return nil
 }
 
-func Paths() brandPaths {
+func (f ScrapeBrand) GetBrandPaths() BrandPaths {
 
 	domain := "https://www.zalando.se/maerken/herrskor/"
 
 	c := colly.NewCollector()
 
-	var listOfLinks brandPaths
+	var listOfLinks BrandPaths
 	c.OnHTML("a[class='xL5R3s JT3_zV CKDt_l LyRfpJ pVrzNP aX2-iv PO9Fsd _0Hsc7j']", func(e *colly.HTMLElement) {
 
 		listOfLinks = append(listOfLinks, strings.Join(strings.Fields(e.Attr("href")), " "))

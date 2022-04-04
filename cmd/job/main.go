@@ -2,6 +2,7 @@ package main
 
 import (
 	"shoe_scraper/internal/feed"
+	"shoe_scraper/internal/job"
 )
 
 type article struct {
@@ -25,6 +26,14 @@ type brandConfig struct {
 
 func main() {
 
-	feed.ProductPaths(feed.Paths())
+	brand := feed.ScrapeBrand{}
+	products := feed.ScrapeProducts{}
+
+	job := job.Crawlers{
+		products,
+		brand,
+	}
+
+	job.Run()
 
 }
