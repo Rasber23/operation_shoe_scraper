@@ -1,7 +1,7 @@
 package job
 
 import (
-	"shoe_scraper/internal/feed"
+	"github.com/Rasber23/operation_shoe_scraper/internal/feed"
 )
 
 type Crawlers struct {

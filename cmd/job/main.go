@@ -1,12 +1,9 @@
 package main
 
-import (
-	"shoe_scraper/internal/feed"
-	"shoe_scraper/internal/job"
-)
+import "github.com/Rasber23/operation_shoe_scraper/internal/chromedp"
 
 type article struct {
-	categorie     string
+	category      string
 	brand         string
 	articleNumber string
 	articleName   string
@@ -26,7 +23,7 @@ type brandConfig struct {
 
 func main() {
 
-	brand := feed.ScrapeBrand{}
+	/*brand := feed.ScrapeBrand{}
 	products := feed.ScrapeProducts{}
 
 	job := job.Crawlers{
@@ -34,6 +31,9 @@ func main() {
 		brand,
 	}
 
-	job.Run()
-
+	job.Run()*/
+	chromedp.ChromedpScraper()
+	/*	feed.Scrape()*/
+	/*	geziyor.RunGeyz()
+	 */
 }
