@@ -1,17 +1,12 @@
 package main
 
-import "github.com/Rasber23/operation_shoe_scraper/internal/chromedp"
-
-type article struct {
-	category      string
-	brand         string
-	articleNumber string
-	articleName   string
-	price         string
-	outerMaterial string
-	lining        string
-	sole          string
-}
+import (
+	"github.com/Rasber23/operation_shoe_scraper/internal/bigquery"
+	"github.com/Rasber23/operation_shoe_scraper/internal/business/job"
+	dom_parser "github.com/Rasber23/operation_shoe_scraper/internal/dom-parser"
+	"github.com/Rasber23/operation_shoe_scraper/internal/feed/crawlers"
+	"github.com/Rasber23/operation_shoe_scraper/internal/feed/scraper"
+)
 
 type crawlerConfig struct {
 	startURL string
@@ -23,16 +18,28 @@ type brandConfig struct {
 
 func main() {
 
-	/*brand := feed.ScrapeBrand{}
-	products := feed.ScrapeProducts{}
+	brand := crawlers.ScrapeBrand{}
+	products := crawlers.ScrapeProducts{}
 
-	job := job.Crawlers{
-		products,
-		brand,
+	scraper := scraper.Scraper{}
+	transformer := dom_parser.Transform{}
+	saver := bigquery.BQService{
+		ProjectId: "shoe-crawler",
+		DataSetId: "zalando",
+		TableId:   "articles",
 	}
 
-	job.Run()*/
-	chromedp.ChromedpScraper()
+	job := job.Crawlers{
+		Scrape:        scraper,
+		Transform:     transformer,
+		CrawlProducts: products,
+		CrawlBrands:   brand,
+		Saver:         saver,
+	}
+
+	job.Run()
+
+	//scraper.Run()
 	/*	feed.Scrape()*/
 	/*	geziyor.RunGeyz()
 	 */

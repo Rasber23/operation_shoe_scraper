@@ -6,10 +6,6 @@ import (
 	"fmt"
 )
 
-func getTable() {
-
-}
-
 func createTable(projectId, datasetID, tableID string, schema bigquery.Schema) error {
 
 	ctx := context.Background()

@@ -4,19 +4,24 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="68aaf158-4add-4767-b47a-806ebaf54037" name="Default Changelist" comment="add scraper and crawler">
-      <change afterPath="$PROJECT_DIR$/internal/bigquery/procedures.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/internal/bigquery/save-articles.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/internal/bigquery/schemas.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/internal/chromedp/chromedpScrapeing.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/internal/geziyor/gezyor.go" afterDir="false" />
+    <list default="true" id="68aaf158-4add-4767-b47a-806ebaf54037" name="Default Changelist" comment="add scrapers">
+      <change afterPath="$PROJECT_DIR$/internal/bigquery/create-dataset.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/internal/dom-parser/dom-transformer.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/internal/feed/crawlers/crawler-products.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/internal/feed/scraper/scraper-chromedp.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/productInfo.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmd/job/job.go" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/cmd/job/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/cmd/job/main.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/internal/entity/brand.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/entity/brand.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/internal/feed/scraper.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/feed/scraper.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/internal/job/job.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/job/job.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internal/bigquery/procedures.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/bigquery/create-table.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internal/bigquery/save-articles.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/bigquery/save-articles.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internal/bigquery/schemas.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/bigquery/schemas.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internal/chromedp/chromedpScrapeing.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/internal/entity/article.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/business/entity/article.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internal/entity/brand.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/business/entity/brand.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internal/feed/crawler.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/feed/crawlers/crawler-brand.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internal/feed/scraper.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/feed/scraper/scraper-colly.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internal/geziyor/gezyor.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/internal/job/job.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/business/job/job.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,8 +34,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Go File" />
         <option value="HTML File" />
+        <option value="Go File" />
       </list>
     </option>
   </component>
@@ -79,17 +84,18 @@
     &quot;go.import.settings.migrated&quot;: &quot;true&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;
+    &quot;settings.editor.selected.configurable&quot;: &quot;terminal&quot;
   }
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/internal/business" />
+      <recent name="$PROJECT_DIR$/internal" />
+      <recent name="$PROJECT_DIR$/internal/parser" />
       <recent name="$PROJECT_DIR$/internal/bigquery" />
       <recent name="$PROJECT_DIR$/internal/job" />
-      <recent name="$PROJECT_DIR$/internal" />
-      <recent name="$PROJECT_DIR$/cmd/job" />
     </key>
   </component>
   <component name="RunManager">
@@ -157,7 +163,10 @@
       <workItem from="1650719850123" duration="18610000" />
       <workItem from="1651476340665" duration="782000" />
       <workItem from="1651774588159" duration="6420000" />
-      <workItem from="1651950368774" duration="483000" />
+      <workItem from="1651950368774" duration="25979000" />
+      <workItem from="1652117525780" duration="3320000" />
+      <workItem from="1652297292129" duration="6759000" />
+      <workItem from="1652531229171" duration="1062000" />
     </task>
     <task id="LOCAL−00001" summary="add scraper and crawler">
       <created>1649054695145</created>
@@ -165,8 +174,20 @@
       <option name="presentableId" value="LOCAL−00001" />
       <updated>1649054695145</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="add scrapers">
+      <created>1651950972026</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1651950972026</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
+  </component>
+  <component name="TerminalProjectNonSharedOptionsProvider">
+    <envs>
+      <env key="GOOGLE_APPLICATION_CREDENTIALS" value="$USER_HOME$/keys/shoe-crawler-99fd90bddaae.json" />
+    </envs>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
@@ -184,7 +205,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="add scraper and crawler" />
-    <option name="LAST_COMMIT_MESSAGE" value="add scraper and crawler" />
+    <MESSAGE value="add scrapers" />
+    <option name="LAST_COMMIT_MESSAGE" value="add scrapers" />
   </component>
   <component name="VgoProject">
     <settings-migrated>true</settings-migrated>
