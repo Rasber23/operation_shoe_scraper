@@ -23,6 +23,7 @@ require (
 	github.com/chromedp/chromedp v0.8.0 // indirect
 	github.com/chromedp/sysutil v1.0.0 // indirect
 	github.com/geziyor/geziyor v0.0.0-20211211110410-34d17a2d3d5a // indirect
+	github.com/go-chi/chi/v5 v5.0.7 // indirect
 	github.com/go-kit/kit v0.12.0 // indirect
 	github.com/gobwas/glob v0.2.3 // indirect
 	github.com/gobwas/httphead v0.1.0 // indirect

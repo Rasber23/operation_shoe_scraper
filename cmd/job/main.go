@@ -1,20 +1,17 @@
 package main
 
 import (
+	"fmt"
 	"github.com/Rasber23/operation_shoe_scraper/internal/bigquery"
 	"github.com/Rasber23/operation_shoe_scraper/internal/business/job"
 	dom_parser "github.com/Rasber23/operation_shoe_scraper/internal/dom-parser"
 	"github.com/Rasber23/operation_shoe_scraper/internal/feed/crawlers"
 	"github.com/Rasber23/operation_shoe_scraper/internal/feed/scraper"
+	"github.com/go-chi/chi/v5"
+	"github.com/go-chi/chi/v5/middleware"
+	"net/http"
+	"os"
 )
-
-type crawlerConfig struct {
-	startURL string
-}
-
-type brandConfig struct {
-	linkElement string
-}
 
 func main() {
 
@@ -37,10 +34,17 @@ func main() {
 		Saver:         saver,
 	}
 
-	job.Run()
+	port := os.Getenv("PORT")
+	port = fmt.Sprintf(":%v", port)
 
-	//scraper.Run()
-	/*	feed.Scrape()*/
-	/*	geziyor.RunGeyz()
-	 */
+	r := chi.NewRouter()
+	r.Use(middleware.Logger)
+	r.Get("/", func(w http.ResponseWriter, r *http.Request) {
+		job.Run()
+	})
+
+	er := http.ListenAndServe(port, r)
+	if er != nil {
+		fmt.Errorf("%v", er)
+	}
 }

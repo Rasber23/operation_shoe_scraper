@@ -35,6 +35,7 @@ type ICrawlBrands interface {
 }
 
 func (crawler Crawlers) Run() {
+
 	brandUrls := crawler.CrawlBrands.GetBrandPaths()
 
 	productUrls := crawler.CrawlProducts.GetProductPaths(brandUrls)
@@ -43,7 +44,7 @@ func (crawler Crawlers) Run() {
 
 	arts := crawler.Transform.Run(domsHtml)
 
-	//crawler.Saver.SaveArticles(arts)
+	crawler.Saver.SaveArticles(arts)
 
 	for _, art := range arts {
 		fmt.Println(art)

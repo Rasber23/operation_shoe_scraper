@@ -18,13 +18,13 @@ func (f ScrapeProducts) GetProductPaths(bp BrandPaths) ProductPaths {
 
 	fmt.Println("Längd: ", len(bp))
 
-	c.OnHTML("a[class='JT3_zV CKDt_l ONArL- _2dqvZS lfPP-F CKDt_l LyRfpJ']", func(e *colly.HTMLElement) {
-
-		c.OnError(func(r *colly.Response, err error) {
-			fmt.Println("Request URL:", r.Request.URL, "failed with response:", r, "\nError:", err)
-		})
+	c.OnHTML("a[class='JT3_zV CKDt_l ONArL- _2dqvZS CKDt_l LyRfpJ']", func(e *colly.HTMLElement) {
 
 		link := strings.Fields(e.Attr("href"))
+		fmt.Println(link)
+		for _, productLink := range link {
+			fmt.Println("test: " + productLink)
+		}
 
 		listOfLinks = append(listOfLinks, link)
 
@@ -44,5 +44,5 @@ func (f ScrapeProducts) GetProductPaths(bp BrandPaths) ProductPaths {
 
 	fmt.Print(listOfLinks)
 
-	return nil
+	return listOfLinks
 }

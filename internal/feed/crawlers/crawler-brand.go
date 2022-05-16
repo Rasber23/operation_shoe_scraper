@@ -18,6 +18,7 @@ func (f ScrapeBrand) GetBrandPaths() BrandPaths {
 	c := colly.NewCollector()
 
 	var listOfLinks BrandPaths
+
 	c.OnHTML("a[class='xL5R3s JT3_zV CKDt_l LyRfpJ pVrzNP aX2-iv PO9Fsd _0Hsc7j']", func(e *colly.HTMLElement) {
 
 		listOfLinks = append(listOfLinks, strings.Join(strings.Fields(e.Attr("href")), " "))
