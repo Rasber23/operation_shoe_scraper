@@ -4,17 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="68aaf158-4add-4767-b47a-806ebaf54037" name="Default Changelist" comment="add add dependency injection">
+    <list default="true" id="68aaf158-4add-4767-b47a-806ebaf54037" name="Default Changelist" comment="add go sum">
       <change beforePath="$PROJECT_DIR$/.github/workflows/_GCP-Deploy.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/_GCP-Deploy.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmd/job/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/cmd/job/main.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/internal/business/job/job.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/business/job/job.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/internal/feed/crawlers/crawler-brand.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/feed/crawlers/crawler-brand.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/internal/feed/crawlers/crawler-products.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/feed/crawlers/crawler-products.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/internal/feed/scraper/scraper-chromedp.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/feed/scraper/scraper-chromedp.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,6 +59,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="SONARLINT_PRECOMMIT_ANALYSIS" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="go.import.settings.migrated" value="true" />
@@ -154,7 +147,7 @@
       <workItem from="1652297292129" duration="6759000" />
       <workItem from="1652531229171" duration="16824000" />
       <workItem from="1652624903360" duration="15555000" />
-      <workItem from="1652698371015" duration="13239000" />
+      <workItem from="1652698371015" duration="14779000" />
     </task>
     <task id="LOCAL−00001" summary="add scraper and crawler">
       <created>1649054695145</created>
@@ -176,7 +169,19 @@
       <option name="project" value="LOCAL" />
       <updated>1652532321058</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL−00004" summary="add container settings and GHA fix">
+      <created>1652711698165</created>
+      <option name="number" value="LOCAL−00004" />
+      <option name="presentableId" value="LOCAL−00004" />
+      <updated>1652711698165</updated>
+    </task>
+    <task id="LOCAL−00005" summary="add go sum">
+      <created>1652711953377</created>
+      <option name="number" value="LOCAL−00005" />
+      <option name="presentableId" value="LOCAL−00005" />
+      <updated>1652711953377</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TerminalProjectNonSharedOptionsProvider">
@@ -215,7 +220,9 @@
     <MESSAGE value="add scraper and crawler" />
     <MESSAGE value="add scrapers" />
     <MESSAGE value="add bq and chromedp" />
-    <option name="LAST_COMMIT_MESSAGE" value="add bq and chromedp" />
+    <MESSAGE value="add container settings and GHA fix" />
+    <MESSAGE value="add go sum" />
+    <option name="LAST_COMMIT_MESSAGE" value="add go sum" />
   </component>
   <component name="VgoProject">
     <integration-enabled>true</integration-enabled>
