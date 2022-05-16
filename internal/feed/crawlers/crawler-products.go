@@ -11,6 +11,7 @@ type ScrapeProducts struct{}
 type ProductPaths [][]string
 
 func (f ScrapeProducts) GetProductPaths(bp BrandPaths) ProductPaths {
+	fmt.Printf("starting Products: ")
 
 	c := colly.NewCollector()
 

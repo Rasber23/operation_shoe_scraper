@@ -1,6 +1,6 @@
 # syntax=docker/dockerfile:1
 
-FROM golang:1.18-alpine AS build
+FROM golang:1.18-buster AS build
 
 WORKDIR /usr/src/job
 
@@ -14,11 +14,10 @@ RUN go build -v -o /usr/local/bin/job cmd/job/*.go
 
 FROM chromedp/headless-shell:latest
 
-RUN apk chromedp/headless-shell:latest
-ENV TZ=Europe/Stockholm
-
+RUN apt-get update; apt install dumb-init -y
+ENTRYPOINT ["dumb-init", "--"]
+COPY --from=build /etc/ssl/certs/ca-certificates.crt /etc/ssl/certs/
 COPY --from=build /usr/local/bin/job /usr/local/bin/job
-
 CMD ["/usr/local/bin/job"]
 
 

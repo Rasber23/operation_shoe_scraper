@@ -3,17 +3,5 @@
 go.mod,c/4/c47645c391ad0571c40779079363c9d48412e18b
 6
 go.sum,5/a/5aa1ac64de2b0c4821af9393b44965020e4a521d
-H
-internal/feed/scraper.go,6/f/6f279c452f8ab6b14a25de7c3c0813eb81eb273f
-C
-internal/job/job.go,1/4/14d9f0c575925007c5942e13038205be8ea4539a
-H
-internal/entity/brand.go,d/b/dbe13fb44c67accbf631a6be07c713a6f434d612
-J
-internal/entity/article.go,1/5/1586a0448b34ce85542777d5d597dcf1d4b77ef8
 ?
 cmd/job/main.go,d/0/d099d33fec8f07b656e03674f3f1804e3ea082e4
->
-cmd/job/job.go,2/c/2cae03906b10e0de67d88913790a8e1c8902a0f1
-H
-internal/feed/crawler.go,8/4/849d6fe8bb3246b9ea15cbf1a9ba444a42606940

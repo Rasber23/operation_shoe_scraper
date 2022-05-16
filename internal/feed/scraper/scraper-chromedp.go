@@ -20,20 +20,16 @@ type ArticleDoms []ArticleDom
 
 func (scraper Scraper) Run(productUrls crawlers.ProductPaths) ArticleDoms {
 
-	/*ctx, cancel := chromedp.NewContext(
+	ctx, cancel := chromedp.NewContext(
 		context.Background(),
 		//chromedp.WithDebugf(log.Printf),
-	)*/
-	ctx, cancel := chromedp.NewExecAllocator(context.Background(), append(chromedp.DefaultExecAllocatorOptions[:], chromedp.Flag("headless", false))...)
-	ctx, cancel = chromedp.NewContext(ctx)
-	//chromedp.WithDebugf(log.Printf))
+	)
 
-	//ctx, cancel = context.WithTimeout(ctx, 30*time.Second)
 	defer cancel()
 
 	var doms ArticleDoms
 
-	for _, urlBrand := range productUrls {
+	for i, urlBrand := range productUrls {
 
 		for _, productUrls := range urlBrand {
 			fmt.Printf("Visiting %v", productUrls)
@@ -41,7 +37,9 @@ func (scraper Scraper) Run(productUrls crawlers.ProductPaths) ArticleDoms {
 			r := fetch(ctx, productUrls)
 			doms = append(doms, r)
 		}
-
+		if i == 5 {
+			break
+		}
 	}
 	return doms
 }

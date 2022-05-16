@@ -13,6 +13,7 @@ type BrandPaths []string
 
 func (f ScrapeBrand) GetBrandPaths() BrandPaths {
 
+	fmt.Printf("starting Brandscraping: ")
 	domain := "https://www.zalando.se/maerken/herrskor/"
 
 	c := colly.NewCollector()

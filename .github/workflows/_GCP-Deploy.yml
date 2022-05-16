@@ -2,9 +2,7 @@ name: Docker
 
 on:
   push:
-    branches:
-      - main
-      - test
+
 env:
   SERVICE_NAME: sneaky-forecast-job-test
 jobs:
@@ -49,12 +47,6 @@ jobs:
 
       - name: Build Docker image
         run: docker build . -t $IMAGE_NAME
-
-      - name: Scan image
-        uses: anchore/scan-action@v3
-        with:
-          image: ${{env.IMAGE_NAME}}
-          fail-build: false
 
       - name: Push Docker image
         run: docker push $IMAGE_NAME

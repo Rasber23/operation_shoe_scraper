@@ -44,11 +44,10 @@ func (crawler Crawlers) Run() {
 
 	arts := crawler.Transform.Run(domsHtml)
 
-	crawler.Saver.SaveArticles(arts)
+	//crawler.Saver.SaveArticles(arts)
 
 	for _, art := range arts {
 		fmt.Println(art)
 	}
-	//crawl.CrawlProducts.GetProductPaths(crawl.CrawlBrands.GetBrandPaths())
 
 }
